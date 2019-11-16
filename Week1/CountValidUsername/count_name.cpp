@@ -8,10 +8,10 @@ using namespace std;
 
 int main() {
 	ifstream infile;
-	infile.open("C:\\Users\\HP\\Desktop\\name.txt");
+	infile.open("C:\\Users\\HP\\Desktop\\name.txt");//check the property of name.txt and change
 
 	ofstream outfile;
-	outfile.open("C:\\Users\\HP\\Desktop\\result.txt");
+	outfile.open("C:\\Users\\HP\\Desktop\\result.txt");//change when neccesary
 
 	string pattern("[a-z]{1}[a-zA-Z\-_]{4,19}");
 	regex reg(pattern);
