@@ -13,13 +13,12 @@ int main() {
 	ofstream outfile;
 	outfile.open("result.txt");//change when neccesary
 
-	string pattern("[a-z]{1}[a-zA-Z\-_]{4,19}");
+	string pattern("[a-z][a-zA-Z\\-_]{5,20}");
 	regex reg(pattern);
-
 
 	int total = 0;
 	if (infile && outfile) {
-		while (infile.get() != EOF) {
+		while (true) {
 			string str = "";
 			char x;
 			while ((x = infile.get()) != ')')//assume infile is not empty
@@ -33,10 +32,13 @@ int main() {
 			if (x == EOF)
 				break;
 		}
+
+		outfile << endl << "total valid names: " << total;
+	
+		infile.close();
+		outfile.close();
 	}
 	
-	outfile << endl << "total valid names: " << total;
-
-	infile.close();
-	outfile.close();
+	
+	
 }
