@@ -1,8 +1,7 @@
 # **LabHomework**
 
-## This is a repository of all homework form the lab seminar: [ToolsSeminar-CS](https://github.com/chhzh123/ToolsSeminar-CS).</br>
-
-## The schedule of the seminar is listed below.
+This is a repository of all homework form the lab seminar: [ToolsSeminar-CS](https://github.com/chhzh123/ToolsSeminar-CS).
+The schedule of the seminar is listed below.
 </br>
 
 |   |Topic|Main Tools|
