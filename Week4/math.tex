@@ -1,0 +1,81 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{graphicx} % includegraphics
+\usepackage{amsfonts} % mathbb
+\usepackage{amsmath} % bmatrix
+\usepackage{ctex}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{enumerate}
+%\geometry{left=2cm,right=2cm,top=2cm,bottom=5cm,scale=0.8}
+\geometry{scale=0.8}
+
+\title{数学分析与线性代数例题}
+\author{佚名}
+\date{2019 年 12 月 6 日}
+
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{微分中值定理及其应用}
+
+\paragraph{定理1}(极值的第二充分条件). 设 $f(x)$在$(x_0-\delta,x_0+\delta)$ 可导且 
+$f^{'}(x_0)=0$ ，又 $f^{''}(x_0)=0$ 存在.
+\begin{enumerate}[1)]
+\setlength{\itemindent}{1em}
+    \item 若 $f^{''}(x_0)<0$ ，则 $f^{'}(x_0)$ 是严格极大值
+    \item 若 $f^{''}(x_0)>0$ ，则 $f^{'}(x_0)$ 是严格极小值.
+\end{enumerate}
+
+\paragraph{例 1.}求 $y=\frac{1}{3}x\sqrt[3]{(x-5)^2}$ 的极值点与极值\footnote{原题摘自《数学分析简明教程》（上册）P142.}.
+\paragraph{解.}函数在 $(-\infty,+\infty)$ 上连续，当 $x\not=5时$ 有
+\begin{equation}
+    y^{'}=\frac{1}{3}\left(\left(x-5\right)^\frac{2}{3}+\frac{2x}{3}\left(x-5\right)^\frac{-1}{3}\right)=\frac{5\left(x-3\right)}{9\left(x-5\right)^\frac{1}{3}}
+\end{equation}
+令 $y^{'}=0$ 得稳定点 $x=3$ ，现列表如下：
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|}
+            \hline
+        $x$ &$(-\infty,3)$ &$3$ &$(3,5)$ &$5$ &$(5,+\infty)$\\
+            \hline
+        $y^{'}$ &$+$ &$0$ &$-$ &$不存在$ &$+$\\
+            \hline
+        $y$ &$\nearrow$ &$\sqrt[3]{4}$ &$\searrow$ &$0$ &$\nearrow$\\
+            \hline
+    \end{tabular}  
+    \label{tab1}
+\end{table}
+
+    从表中可见 $x=3$ 是极大值点，极大值为 $f(3)=\sqrt[3]{4}\mbox{；}x=5$ 为极小值点，极小值为 $f(5)=0$ . 我
+们可以大致地画出函数的图形，如图\ref{fig:1}所示.
+\newpage
+\begin{figure}
+    \centering\includegraphics[width=8cm]{function.pdf}
+    \caption{$y=\frac{1}{3}x\sqrt[3]{(x-5)^2}$的函数图像}
+    \label{fig:1}
+\end{figure}
+
+
+
+\section{行列式}
+\paragraph{例 2. }若 $a,b\in\mathbb{R}^+$ ，求由方程为 $\frac{x_1^2}{a^2}+\frac{x_2^2}{b^2}=1$ 的椭圆为边界的区域 $E$ 的面积\footnote{原题摘自《线性代数及其应用》（第三版）P183.}.
+\paragraph{解.}断言 $E$ 是单位圆盘 $D$ 在线性变换 $T$ 下的像. 这里 $T$ 由矩阵 $A=\begin{bmatrix} a&0\\ 0&b \end{bmatrix}$ 确定，这是因为若 
+$\mathbf{u}=\begin{bmatrix} u_1\\u_2 \end{bmatrix}\mbox{，}\mathbf{x}=\begin{bmatrix} x_1\\x_2 \end{bmatrix}$ ，且 $\mathbf{x}=A\mathbf{u}$ ，则
+\[u_1=\frac{x_1}{a}，u_2=\frac{x_2}{b}\]
+从而得 $u$ 在此单位圆内，即满足 $u_1^2+u_2^2\leq1$ ，当且仅当 $x$ 在 $E$ 内，即满足 $(x_1/a)^2+(x_2/b)^2\leq1$ . 进
+而
+ \begin{align*}
+     \begin{split}
+ \left\{ \mbox{椭圆的面积} \right\}  &= \left\{ \mbox{T(D)的面积} \right\}\\
+                                    &= |\det A| \cdot\left\{ \mbox{D的面积} \right\}\\
+                                    &= a \cdot b \cdot \pi \cdot(1)^2\\
+                                    &= \pi a b
+     \end{split}
+ \end{align*}
+
+
+
+\end{document}
