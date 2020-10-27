@@ -20,7 +20,7 @@ The schedule of the seminar is listed below:
 
 
 ## CSAPP
-This reposity contains some labs that I am intersted in from CSAPP</br>
+This repository contains some labs that I am intersted in from CSAPP.</br>
 Currently I have finished:<br>
 |lab name|evaluation|
 |---|:-----|
